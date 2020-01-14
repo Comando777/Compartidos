@@ -1,0 +1,7 @@
+{
+  "name": "PhotoViewer",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

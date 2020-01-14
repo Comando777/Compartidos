@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Prueba de la Camara
+      
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-button block (click)="sacarCamara()">Hacer Foto</ion-button>
+    <ion-button block (click)="tomarGaleria()">galeria</ion-button>
+    <img [src]="image" *ngIf="image">
+    <ion-button (click)="enviarsms()">Enviar Mensaje</ion-button>
+    </div>
+  <div>
+<button *ngIf="backlightStatus===false" ion-button block (click)="on()">On</button>
+    <button *ngIf="backlightStatus===true" ion-button block (click)="off()">Off</button>
+  </div>
+</ion-content>
