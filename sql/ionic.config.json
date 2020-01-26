@@ -1,0 +1,7 @@
+{
+  "name": "sql",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
