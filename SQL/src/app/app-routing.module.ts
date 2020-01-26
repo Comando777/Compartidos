@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'libros',
     loadChildren: () => import('./pages/libros/libros.module').then( m => m.LibrosPageModule)
   },
+  {
+    path: 'update',
+    loadChildren: () => import('./pages/update/update.module').then( m => m.UpdatePageModule)
+  },
   
 ];
 

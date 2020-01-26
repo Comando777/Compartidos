@@ -72,4 +72,11 @@ export class AutoresPage implements OnInit {
     });
   }
 
+  updateAutorP() {
+    this.db.updateAutor(this.autorx['nombre'], this.autorx['genero'], this.autorx['img'])
+  .then(_ => {
+    this.autor = {};
+  });
+}
+
 }
