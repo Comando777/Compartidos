@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {  Router  } from '@angular/router';
-import { Route } from '@angular/compiler/src/core';
-
+import { MenuController } from '@ionic/angular';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -9,10 +8,13 @@ import { Route } from '@angular/compiler/src/core';
 })
 export class HomePage {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private menuCtrl: MenuController) {}
 
   navigateToproyectos(){
     this.router.navigate(['/proyectos']);
   }
 
+  toggleMenu() {
+    this.menuCtrl.toggle();
+  }
 }

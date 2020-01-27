@@ -1,0 +1,31 @@
+[
+    {
+        "icon": "logo-buffer",
+        "name": "Inicio",
+        "redirectTo": "/home"
+    },
+
+    {
+        "icon": "person",
+        "name": "Perfil",
+        "redirectTo": "/perfil"
+    },
+    
+    {
+        "icon": "filing",
+        "name": "Proyectos",
+        "redirectTo": "/proyectos"
+    },
+    
+    {
+        "icon": "walk",
+        "name": "Personajes",
+        "redirectTo": "/personajes"
+    },
+
+    {
+        "icon": "globe",
+        "name": "Mundos",
+        "redirectTo": "/mundos"
+    }
+]
