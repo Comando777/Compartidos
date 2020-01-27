@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {  Router  } from '@angular/router';
+import { Route } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  navigateToproyectos(){
+    this.router.navigate(['/proyectos']);
+  }
 
 }
