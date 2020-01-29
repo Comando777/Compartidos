@@ -13,8 +13,9 @@ export class HomePage {
   navigateToproyectos(){
     this.router.navigate(['/proyectos']);
   }
-
+  
   toggleMenu() {
     this.menuCtrl.toggle();
   }
+
 }

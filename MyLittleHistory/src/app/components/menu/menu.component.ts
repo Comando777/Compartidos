@@ -15,7 +15,8 @@ export class MenuComponent implements OnInit {
   constructor(private postService: PostService) { }
 
   ngOnInit() {
-    this.componentes = this.postService.getMenuOpts();
+    this.componentes = this.postService.getMenuOpts(); 
   }
+  
 
 }

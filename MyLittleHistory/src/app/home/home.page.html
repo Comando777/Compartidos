@@ -1,6 +1,19 @@
 <app-header titulo="Home"></app-header>
    
 <ion-content>
-      
+    <!--Donde se ponda la ubicacion del boton fab y el icono que va a tener-->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+        
+<!--Aqui agregamos los botones y la direccion en que van a ser desplegados-->
+    <ion-fab-list side="top">
+        <ion-fab-button>Agregar Personaje</ion-fab-button>
+        <ion-fab-button>Crear Mundo</ion-fab-button>
+        <ion-fab-button>Historia</ion-fab-button>
+    </ion-fab-list>
+    
+      </ion-fab> 
 </ion-content>
 
