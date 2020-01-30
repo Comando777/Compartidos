@@ -15,17 +15,13 @@ export class HomePage {
     private menuCtrl: MenuController,
     private modalCtrl: ModalController) {}
 
-  navigateToproyectos(){
-    this.router.navigate(['/proyectos']);
-  }
-  
   toggleMenu() {
     this.menuCtrl.toggle();
   }
 
  async abrirModal() {
 
-    
+      
     const modal = await this.modalCtrl.create({
       component: ModalProyectoPage,
       componentProps: {
@@ -34,6 +30,11 @@ export class HomePage {
       }
     });
 
+    await modal.present();
 
-  }
+     const {data} = await modal.onDidDismiss();
+  
+     console.log ('Retorno del modal', data);
+
+    }
 }

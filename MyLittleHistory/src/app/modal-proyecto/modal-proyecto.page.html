@@ -1,9 +1,32 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
-    <ion-title>modal-proyecto</ion-title>
+    <ion-title text-capitalize>{{nombre}} -- {{pais}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+      <h1>Crea tu proyecto</h1>
+      <div>
+        <ion-list>
+          <ion-label>Imagen</ion-label>
+          <ion-label>Titulo</ion-label>
+          <ion-input placeholder="Titulo de la obra"></ion-input>
+          <ion-label>Genero</ion-label>
+          <ion-input placeholder="Genero literario"></ion-input>
+          <ion-item>
+            <ion-label position="stacked">Plot</ion-label>
+            <ion-textarea></ion-textarea>
+          </ion-item>
+        </ion-list>
+      </div>
+      <ion-button (click)="salirSinArgumentos()"
+                  color="primary" expand="small">
+      Cancelar        
+      </ion-button>
 
+      <ion-button (click)="salirConArgumentos()"
+      color="secondary" expand="small">
+      Guardar        
+      </ion-button>      
 </ion-content>
+ 
