@@ -4,20 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ProyectosPageRoutingModule } from './proyectos-routing.module';
+import { MundosPageRoutingModule } from './mundos-routing.module';
 
-import { ProyectosPage } from './proyectos.page';
+import { MundosPage } from './mundos.page';
 import { ComponentsModule } from '../components/components.module';
+import { PipesModule } from '../pipes/pipes.module';
 
- 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ProyectosPageRoutingModule,
+    MundosPageRoutingModule,
+    PipesModule,
     ComponentsModule
   ],
-  declarations: [ProyectosPage]
+  declarations: [MundosPage]
 })
-export class ProyectosPageModule {}
+export class MundosPageModule {}

@@ -17,4 +17,7 @@ export class PostService {
     return this.http.get<Componente[]>('/assets/data/menu.json');
   }
 
+  getAlbumes(){
+    return this.http.get<any[]>('https:jsonplaceholder.typicode.com/albums');
+  }
 }

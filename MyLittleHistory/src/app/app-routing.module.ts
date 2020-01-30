@@ -8,6 +8,18 @@ const routes: Routes = [
     path: 'proyectos',
     loadChildren: () => import('./proyectos/proyectos.module').then( m => m.ProyectosPageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'personajes',
+    loadChildren: () => import('./personajes/personajes.module').then( m => m.PersonajesPageModule)
+  },
+  {
+    path: 'mundos',
+    loadChildren: () => import('./mundos/mundos.module').then( m => m.MundosPageModule)
+  },
 ];
 
 @NgModule({
