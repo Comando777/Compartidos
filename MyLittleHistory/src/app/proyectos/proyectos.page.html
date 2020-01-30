@@ -1,5 +1,9 @@
 <app-header titulo="Mis Proyectos"></app-header>
    
+<ion-searchbar animated
+               (ionChange)="buscar( $event )"></ion-searchbar>
     <ion-content>
-        
-    </ion-content>
+        <ion-item *ngFor="let album of albumes | filtro: textoBuscar: 'title'">
+          {{album.title}}
+        </ion-item>
+    </ion-content> 

@@ -20,6 +20,7 @@ const routes: Routes = [
     path: 'mundos',
     loadChildren: () => import('./mundos/mundos.module').then( m => m.MundosPageModule)
   },
+  
 ];
 
 @NgModule({

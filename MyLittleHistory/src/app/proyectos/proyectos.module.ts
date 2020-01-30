@@ -8,14 +8,16 @@ import { ProyectosPageRoutingModule } from './proyectos-routing.module';
 
 import { ProyectosPage } from './proyectos.page';
 import { ComponentsModule } from '../components/components.module';
+import { PipesModule } from '../pipes/pipes.module';
 
- 
+  
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     ProyectosPageRoutingModule,
+    PipesModule,
     ComponentsModule
   ],
   declarations: [ProyectosPage]

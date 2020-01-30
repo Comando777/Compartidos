@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
-import { PostService } from 'src/app/services/post.service';
+import { PostService } from 'src/app/services/post.service'; 
 
 @Component({
   selector: 'app-mundos',

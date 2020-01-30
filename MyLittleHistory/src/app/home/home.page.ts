@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import {  Router  } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { MenuController, ModalController } from '@ionic/angular';
+import { ModalProyectoPage } from '../modal-proyecto/modal-proyecto.page';
+
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -8,7 +11,9 @@ import { MenuController } from '@ionic/angular';
 })
 export class HomePage {
 
-  constructor(private router: Router, private menuCtrl: MenuController) {}
+  constructor(private router: Router, 
+    private menuCtrl: MenuController,
+    private modalCtrl: ModalController) {}
 
   navigateToproyectos(){
     this.router.navigate(['/proyectos']);
@@ -18,4 +23,17 @@ export class HomePage {
     this.menuCtrl.toggle();
   }
 
+ async abrirModal() {
+
+    
+    const modal = await this.modalCtrl.create({
+      component: ModalProyectoPage,
+      componentProps: {
+        nombre : 'Fernando',
+        pais: 'Costa Rica'
+      }
+    });
+
+
+  }
 }
