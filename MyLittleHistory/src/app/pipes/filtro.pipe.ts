@@ -16,7 +16,7 @@ export class FiltroPipe implements PipeTransform {
     texto = texto.toLowerCase();
 /*el item title es lo que va tomar como pioritario buscar*/ 
     return arreglo.filter( item => {
-      return item.[columna].toLowerCase()
+      return item[columna].toLowerCase()
               .includes (texto);
     });
 
