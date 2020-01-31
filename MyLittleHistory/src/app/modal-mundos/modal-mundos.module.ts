@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ModalMundosPageRoutingModule } from './modal-mundos-routing.module';
+
 
 import { ModalMundosPage } from './modal-mundos.page';
 
@@ -12,8 +12,7 @@ import { ModalMundosPage } from './modal-mundos.page';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
-    ModalMundosPageRoutingModule
+    IonicModule
   ],
   declarations: [ModalMundosPage]
 })

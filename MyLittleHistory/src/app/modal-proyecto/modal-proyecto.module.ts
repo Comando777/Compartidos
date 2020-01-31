@@ -10,7 +10,7 @@ import { ModalProyectoPage } from './modal-proyecto.page';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    IonicModule
   ],
   declarations: [ModalProyectoPage]
 })

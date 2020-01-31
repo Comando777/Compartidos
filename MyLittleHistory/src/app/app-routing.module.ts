@@ -20,15 +20,6 @@ const routes: Routes = [
     path: 'mundos',
     loadChildren: () => import('./mundos/mundos.module').then( m => m.MundosPageModule)
   },
-  {
-    path: 'modal-personajes',
-    loadChildren: () => import('./modal-personajes/modal-personajes.module').then( m => m.ModalPersonajesPageModule)
-  },
-  {
-    path: 'modal-mundos',
-    loadChildren: () => import('./modal-mundos/modal-mundos.module').then( m => m.ModalMundosPageModule)
-  },
-  
 ];
 
 @NgModule({

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {  Router  } from '@angular/router';
 import { MenuController, ModalController } from '@ionic/angular';
 import { ModalProyectoPage } from '../modal-proyecto/modal-proyecto.page';
+import { ModalPersonajesPage } from '../modal-personajes/modal-personajes.page';
 
 
 @Component({
@@ -37,4 +38,42 @@ export class HomePage {
      console.log ('Retorno del modal', data);
 
     }
+
+    async abrirModal2() {
+
+      
+      const modal = await this.modalCtrl.create({
+        component: ModalPersonajesPage,
+        componentProps: {
+          nombre : 'Fernando',
+          pais: 'Costa Rica'
+        }
+      });
+  
+      await modal.present();
+  
+       const {data} = await modal.onDidDismiss();
+    
+       console.log ('Retorno del modal', data);
+  
+      }
+
+      async abrirModal3() {
+
+      
+        const modal = await this.modalCtrl.create({
+          component: ModalPersonajesPage,
+          componentProps: {
+            nombre : 'Fernando',
+            pais: 'Costa Rica'
+          }
+        });
+    
+        await modal.present();
+    
+         const {data} = await modal.onDidDismiss();
+      
+         console.log ('Retorno del modal', data);
+    
+        }
 }

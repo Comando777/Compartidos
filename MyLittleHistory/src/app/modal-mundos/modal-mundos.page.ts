@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal-mundos',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalMundosPage implements OnInit {
 
-  constructor() { }
+  constructor( private modalCtrl: ModalController ) { }
+
+  @Input() nombre;
+  @Input() pais;
 
   ngOnInit() {
   }
 
+  salirSinArgumentos() {
+    this.modalCtrl.dismiss();
+  }
+
+  salirConArgumentos() {
+    this.modalCtrl.dismiss({
+      nombre: 'Felipe',
+      pais: 'España'
+    });
+  }
 }

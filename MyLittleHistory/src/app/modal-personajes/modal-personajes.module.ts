@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ModalPersonajesPageRoutingModule } from './modal-personajes-routing.module';
 
 import { ModalPersonajesPage } from './modal-personajes.page';
 
@@ -13,7 +12,7 @@ import { ModalPersonajesPage } from './modal-personajes.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ModalPersonajesPageRoutingModule
+    
   ],
   declarations: [ModalPersonajesPage]
 })
