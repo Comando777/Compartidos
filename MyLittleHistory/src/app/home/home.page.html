@@ -8,5 +8,19 @@
   </ion-fab>
   <ion-button expand="full" (click)="abrirModal2()">modal 2 </ion-button>
   <ion-button expand="full" (click)="abrirModal3()">modal 3 </ion-button>
+<!--Lista con card-->
+    <ion-card>
+      <ion-card-header>
+        Titulo del proyecto
+      </ion-card-header>
+
+      <ion-list>
+        <button ion-item *ngFor="let item of lista">
+          <ion-icon name="cart" item-start></ion-icon>
+          {{ item.titulo}}
+        </button>
+      </ion-list>
+    </ion-card>
+<!--Fin de la lista-->
 </ion-content>
 

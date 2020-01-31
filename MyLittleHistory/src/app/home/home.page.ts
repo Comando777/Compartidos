@@ -12,6 +12,17 @@ import { ModalPersonajesPage } from '../modal-personajes/modal-personajes.page';
 })
 export class HomePage {
 
+  lista: Array<any> = [
+    {
+      titulo: "perro",
+      color: "#444"
+    },
+    {
+      titulo: "gato",
+      color: "#999"
+    }
+  ]
+
   constructor(private router: Router, 
     private menuCtrl: MenuController,
     private modalCtrl: ModalController) {}
