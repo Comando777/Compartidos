@@ -3,6 +3,9 @@ import {  Router  } from '@angular/router';
 import { MenuController, ModalController } from '@ionic/angular';
 import { ModalProyectoPage } from '../modal-proyecto/modal-proyecto.page';
 import { ModalPersonajesPage } from '../modal-personajes/modal-personajes.page';
+import { ModalListMPage } from '../modal-list-m/modal-list-m.page';
+import { ModalListPPage } from '../modal-list-p/modal-list-p.page';
+import { ModalMundosPage } from '../modal-mundos/modal-mundos.page';
 
 
 @Component({
@@ -73,7 +76,47 @@ export class HomePage {
 
       
         const modal = await this.modalCtrl.create({
-          component: ModalPersonajesPage,
+          component: ModalMundosPage,
+          componentProps: {
+            nombre : 'Fernando',
+            pais: 'Costa Rica'
+          }
+        });
+    
+        await modal.present();
+    
+         const {data} = await modal.onDidDismiss();
+      
+         console.log ('Retorno del modal', data);
+    
+        }
+
+        
+      async abrirModal4() {
+
+      
+        const modal = await this.modalCtrl.create({
+          component: ModalListMPage,
+          componentProps: {
+            nombre : 'Fernando',
+            pais: 'Costa Rica'
+          }
+        });
+    
+        await modal.present();
+    
+         const {data} = await modal.onDidDismiss();
+      
+         console.log ('Retorno del modal', data);
+    
+        }
+
+        
+      async abrirModal5() {
+
+      
+        const modal = await this.modalCtrl.create({
+          component: ModalListPPage,
           componentProps: {
             nombre : 'Fernando',
             pais: 'Costa Rica'

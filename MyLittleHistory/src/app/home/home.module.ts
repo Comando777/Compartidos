@@ -12,12 +12,18 @@ import { ModalPersonajesPage } from '../modal-personajes/modal-personajes.page';
 import { ModalPersonajesPageModule } from '../modal-personajes/modal-personajes.module';
 import { ModalMundosPage } from '../modal-mundos/modal-mundos.page';
 import { ModalMundosPageModule } from '../modal-mundos/modal-mundos.module';
+import { ModalListPPage } from '../modal-list-p/modal-list-p.page';
+import { ModalListMPage } from '../modal-list-m/modal-list-m.page';
+import { ModalListMPageModule } from '../modal-list-m/modal-list-m.module';
+import { ModalListPPageModule } from '../modal-list-p/modal-list-p.module';
 
 @NgModule({
   entryComponents: [
     ModalProyectoPage,
     ModalPersonajesPage,
-    ModalMundosPage
+    ModalMundosPage,
+    ModalListPPage,
+    ModalListMPage
   ],
   imports: [
     CommonModule,
@@ -26,6 +32,8 @@ import { ModalMundosPageModule } from '../modal-mundos/modal-mundos.module';
     ModalProyectoPageModule,
     ModalPersonajesPageModule,
     ModalMundosPageModule,
+    ModalListMPageModule,
+    ModalListPPageModule,
     IonicModule,
     RouterModule.forChild([
       {

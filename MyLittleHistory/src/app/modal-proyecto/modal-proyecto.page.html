@@ -1,31 +1,32 @@
 <ion-header no-border>
   <ion-toolbar>
-    <ion-title text-capitalize>{{nombre}} -- {{pais}}</ion-title>
+    <ion-title text-capitalize><h1>Crea tu proyecto</h1></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-      <h1>Crea tu proyecto</h1>
+<ion-content padding> 
+      
       <div>
-        <ion-list>
-          <ion-label>Imagen</ion-label>
-          <ion-label>Titulo</ion-label>
-          <ion-input placeholder="Titulo de la obra"></ion-input>
-          <ion-label>Genero</ion-label>
-          <ion-input placeholder="Genero literario"></ion-input>
-          <ion-item>
-            <ion-label position="stacked">Plot</ion-label>
-            <ion-textarea></ion-textarea>
-          </ion-item>
-        </ion-list>
+        <ion-item>
+          <ion-label position="stacked">Cual es el titulo?</ion-label>
+          <ion-input  placeholder="Titulo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Cuál es el género que vas a escribir?</ion-label>
+          <ion-input  placeholder="Género de preferencia"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Foto</ion-label>
+          <ion-input  placeholder="https://..."></ion-input>
+        </ion-item>
       </div>
       <ion-button (click)="salirSinArgumentos()"
-                  color="primary" expand="small">
+                  color="primary" expand="block">
       Cancelar        
       </ion-button>
 
       <ion-button (click)="salirConArgumentos()"
-      color="secondary" expand="small">
+      color="secondary" expand="block">
       Guardar        
       </ion-button>      
 </ion-content>

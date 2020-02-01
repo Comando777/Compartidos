@@ -148,6 +148,6 @@ export class DatabaseService {
     return this.database.executeSql('INSERT INTO obra (titulo, autorId) VALUES (?, ?)', data).then(data => {
       this.loadLibros();
     });
-  }
 
+  }
 }

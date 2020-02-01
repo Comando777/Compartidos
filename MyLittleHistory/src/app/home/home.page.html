@@ -2,25 +2,32 @@
    
 <ion-content>
   <ion-fab vertical="bottom" horizontal="end" slot= "fixed">
-    <ion-fab-button color="danger" (click)="abrirModal()">
+    <ion-fab-button color="success" (click)="abrirModal()">
         <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-  <ion-button expand="full" (click)="abrirModal2()">modal 2 </ion-button>
-  <ion-button expand="full" (click)="abrirModal3()">modal 3 </ion-button>
-<!--Lista con card-->
-    <ion-card>
-      <ion-card-header>
-        Titulo del proyecto
-      </ion-card-header>
-
+  <ion-button expand="full" (click)="abrirModal2()">Modal de Personaje </ion-button>
+  <ion-button expand="full" (click)="abrirModal3()">Modal de Mundos </ion-button>
+  <ion-button expand="full" (click)="abrirModal4()">Modal Lista de Personajes </ion-button>
+  <ion-button expand="full" (click)="abrirModal5()">Modal Lista de Mundos </ion-button>
+<!--Lista con card--> 
+<button ion-item *ngFor="let item of lista">   
+<ion-card>
       <ion-list>
-        <button ion-item *ngFor="let item of lista">
-          <ion-icon name="cart" item-start></ion-icon>
+        
+          <ion-icon name="cart"></ion-icon>
           {{ item.titulo}}
-        </button>
+          <ion-card-header>
+            <ion-card-subtitle>Destination</ion-card-subtitle>
+            <ion-card-title>Madison, WI</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
+          </ion-card-content>
+        
       </ion-list>
     </ion-card>
+  </button>
 <!--Fin de la lista-->
 </ion-content>
 
