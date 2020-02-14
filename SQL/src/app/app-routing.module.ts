@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'autores', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'autores',
     loadChildren: () => import('./pages/autores/autores.module').then( m => m.AutoresPageModule)
@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path: 'update',
     loadChildren: () => import('./pages/update/update.module').then( m => m.UpdatePageModule)
+  }, 
+   {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
   
 ];

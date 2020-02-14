@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { AutoresPageRoutingModule } from './autores-routing.module';
 
 import { AutoresPage } from './autores.page';
+import { ModalPage } from '../modal/modal.page';
+import { ModalPageModule } from '../modal/modal.module';
 
 @NgModule({
+  entryComponents:[ModalPage],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AutoresPageRoutingModule
+    AutoresPageRoutingModule,
+    ModalPageModule
   ],
   declarations: [AutoresPage]
 })

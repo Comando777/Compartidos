@@ -135,9 +135,9 @@ export class DatabaseService {
     });
   }
  
-  updateAutor(autorx: AutorInt) {
-    let data = [autorx.nombre, autorx.genero, autorx.img];
-    return this.database.executeSql(`UPDATE autor SET nombre = ?, genero = ?, img = ? WHERE id = ${autorx.id}`, data).then(data => {
+  updateAutor(nombre,genero,img,id){
+    let data= [nombre,genero,img,id];
+    return this.database.executeSql('UPDATE autor SET nombre = ?, genero = ?, img = ? WHERE id = ?',data).then(data =>{
       this.loadAutores();
     })
   }

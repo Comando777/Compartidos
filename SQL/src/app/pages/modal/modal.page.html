@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  {{id}}
+
+<ion-label>Nombre</ion-label>
+<ion-input [(ngModel)]="autor.nombre">
+</ion-input>
+
+<ion-label>genero</ion-label>
+<ion-input [(ngModel)]="autor.genero">
+</ion-input>
+<ion-label>img</ion-label>
+<ion-input [(ngModel)]="autor.img">
+</ion-input>
+<ion-button (click)="salirSinArgumentos()"
+color="primary" expand="small">
+Cancelar        
+</ion-button>
+<ion-button (click)="updateAutorP(autor.nombre,autor.genero,autor.img,this.id)">Actualizar</ion-button>
+</ion-content>

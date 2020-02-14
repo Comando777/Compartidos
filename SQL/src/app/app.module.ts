@@ -14,13 +14,23 @@ import { SQLite } from '@ionic-native/sqlite/ngx';
  
 import { HttpClientModule } from '@angular/common/http';
 
+import { environment } from 'src/environments/environment';
+import { AuthenticateService } from './services/authentication.service';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+ 
+import * as firebase from 'firebase';
+ 
+firebase.initializeApp(environment.firebaseConfig);
+ 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule],
+  imports: [BrowserModule,AngularFireAuthModule
+,    IonicModule.forRoot(), AppRoutingModule,HttpClientModule],
   providers: [
-    StatusBar,
+    StatusBar, AuthenticateService,
     SplashScreen,
+    
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     SQLite,
     SQLitePorter
